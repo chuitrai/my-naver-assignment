@@ -1,3 +1,10 @@
+# Student Task Manager
+
+Project scaffolded for NAVER Vietnam AI Hackathon.
+
+## Structure
+See project_structure_detailed.md for full details.
+
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/YHSq4TPZ)
 # To-Do App – Preliminary Assignment Submission
 ⚠️ Please complete **all sections marked with the ✍️ icon** — these are required for your submission.
@@ -62,4 +69,4 @@ Example (replace with your actual steps)
 ## ✅ Checklist
 - [ ] Code runs without errors  
 - [ ] All required features implemented (add/edit/delete/complete tasks)  
-- [ ] All ✍️ sections are filled  
+- [ ] All ✍️ sections are filled

@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Another files
+.env
+.env.local
+hackathon_implementation_plan.md
+project_structure_detailed.md

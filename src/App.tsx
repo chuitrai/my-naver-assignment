@@ -1,22 +1,43 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import React from 'react';
 import './App.css'
+import { lazy, Suspense } from 'react'
+
 import hackathonGraphic from './assets/hackathon-graphic.svg'
 import naverLogo from './assets/naver-logo.svg'
 
-function App() {
-  return (
-    <div className="container">
-      <div className="content">
-        <img src={naverLogo} alt="NAVER Vietnam AI Hackathon" className="logo" />
-        
-        <div className="greeting">
-          <p className="hello">Xin chào! 안녕하세요!</p>
-          <p className="subtitle">Hello World</p>
-        </div>
-      </div>
-      
-      <img className="graphic" src={hackathonGraphic} alt="" />
-    </div>
-  )
+const HomePage  = lazy(() => import('./pages/HomePage'))
+const TasksPage = lazy(() => import('./pages/TasksPage'))
+const StatsPage = lazy(() => import('./pages/StatsPage'))
+
+import Layout from './components/Layout.tsx';
+import {PATH} from './routes/route.ts'
+
+function NotFoundPage() {
+  return <div className="text-red-600">404 — Page not found</div>
 }
 
-export default App
+function FallbackPage() {
+    return <div className="text-gray-600">Loading...</div>
+}
+
+// Main app structure with providers, routing, and global state
+const App: React.FC = () => {
+  return (
+    <BrowserRouter>
+      <Suspense fallback={<FallbackPage />}>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path={PATH.home} element={<HomePage />} />
+            <Route path={PATH.tasks} element={<TasksPage />} />
+            <Route path={PATH.stats} element={<StatsPage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Route>
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
+  );
+};
+
+export default App;
