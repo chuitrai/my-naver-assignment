@@ -4,8 +4,7 @@ import React from 'react';
 import './App.css'
 import { lazy, Suspense } from 'react'
 
-import hackathonGraphic from './assets/hackathon-graphic.svg'
-import naverLogo from './assets/naver-logo.svg'
+
 
 const HomePage  = lazy(() => import('./pages/HomePage'))
 const TasksPage = lazy(() => import('./pages/TasksPage'))

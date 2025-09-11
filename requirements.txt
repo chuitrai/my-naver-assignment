@@ -1,0 +1,7 @@
+react-router-dom
+lucide-react
+vitest
+zod
+react-hook-form
+@hookform/resolvers
+react-window

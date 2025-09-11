@@ -6,8 +6,8 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: #F9FAFB; /* nền sáng */
-  color: #111827; /* chữ chính đậm */
+  background: #1a1a2e;
+  color: white;
 }
 
 .container {
@@ -16,10 +16,6 @@ body {
   display: flex;
   align-items: center;
   padding: 0 8%;
-}
-
-.content {
-  flex: 1;
 }
 
 .logo {
@@ -35,21 +31,17 @@ body {
 
 .hello {
   font-size: 2.5rem;
-  color: #2563EB; /* xanh dương chính */
+  color: #5FF281;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .subtitle {
   font-size: 1.5rem;
-  color: #6B7280; /* xám trung tính */
+  color: #888;
 }
 
 .graphic {
   width: 500px;
   height: auto;
-  border: 3px solid #F97316; /* cam nhấn */
-  border-radius: 12px;
-  padding: 0.5rem;
-  background: #ffffff; /* giữ sáng */
 }
